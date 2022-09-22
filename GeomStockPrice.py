@@ -184,7 +184,7 @@ if __name__ == "__main__":
         title_string = "t = " + t_title
         
         axs_2[i].text(0.05, .7,title_string,
-            transform=axs[i].transAxes, fontsize=15)
+            transform=axs_2[i].transAxes, fontsize=15)
     
     # Plot appearances
     title_string = r"$S_0 = $" + str(S_0) + r", $r = $" + str(r) + r", $\sigma = $" + str(sigma)
