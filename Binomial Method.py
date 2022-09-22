@@ -1,8 +1,9 @@
 # This program creates a binary tree modelling the price of a stock
 # The price is dependent on interest rates, volatility and time
 # Based on a p = 0.5 model
-
 # -------------------------
+
+### Author: Felix Prutton
 
 # import modules
 import numpy as np
