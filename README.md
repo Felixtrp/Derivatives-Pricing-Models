@@ -8,7 +8,7 @@ The Black-Scholes equation can be used to determine the value of certain derivat
 The equation relies on a number of simplifying assumptions.  The equation - and modified versions of the equation - are still widely used as basis for many option pricing models.
 The programs in this repo explore the equation, and find solutions to it using a number of different numerical methods.
 
-## Monte Carlo Methods - Stock Pricing
+## Geometric Brownian Motion - Stock Pricing
 To model complex or 'exotic' options, it issometimes necessary to resort to Monte-Carlo methods: producing a simulation of how the value derived from a single derivative evolves over time due to random variation in the price of an underlying or any other factors), and then running this simulation a large number of times to obtain an expected value (and thus, fair price for the option at the current time.
 
 These method are often computationally expenseive, and should be avoided when analytic or other more efficient numerical methods are available.  However, for the most complex types of derivatives, the Monte-Carlo method offers a 'last resort' method, when nothing else will suffice.
