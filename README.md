@@ -7,22 +7,6 @@ The repo contains programs that use a number of different implementations.
 The Black-Scholes equation can be used to determine the value of certain derivatives (European calls and pits) and has an analytic solution.
 The equation relies on a number of simplifying assumptions.  The equation - and modified versions of the equation - are still widely used as basis for many option pricing models.
 The programs in this repo explore the equation, and find solutions to it using a number of different numerical methods.
-## Geometric Brownian Motion - Stock Pricing
-<<<<<<< HEAD
-## Geometric Brownian Motion - Stock Pricing
-=======
-## Monte Carlo Methods - Stock Pricing
->>>>>>> 2fb84df91677f3d67a393a6c667acf6a762acecc
-To model complex or 'exotic' options, it issometimes necessary to resort to Monte-Carlo methods: producing a simulation of how the value derived from a single derivative evolves over time due to random variation in the price of an underlying or any other factors), and then running this simulation a large number of times to obtain an expected value (and thus, fair price for the option at the current time.
-
-These method are often computationally expenseive, and should be avoided when analytic or other more efficient numerical methods are available.  However, for the most complex types of derivatives, the Monte-Carlo method offers a 'last resort' method, when nothing else will suffice.
-
-Before options are priced using this method, it is firt necessary to be able to accurately simulate the movement of underlyings.  It is typically assumed that stock prices evolve via geometric Brownian motion.  This program demonstrate simulations based on this assumption, and compares the results with the analytic soltion derived via Ito calculus  Results of this program are shown below.
-
-![Stock Price Simulations](https://user-images.githubusercontent.com/64906690/191731131-1ffe4e40-ef8a-40b0-a493-20ffa8e0db0d.png)
-
-![Stock Price Probability Distributions Experiment and Analytic](https://user-images.githubusercontent.com/64906690/191731185-f303733a-f269-4b1c-b83a-a5bc339b9382.png)
-
 
 ## Geometric Brownian Motion - Stock Pricing
 To model complex or 'exotic' options, it issometimes necessary to resort to Monte-Carlo methods: producing a simulation of how the value derived from a single derivative evolves over time due to random variation in the price of an underlying or any other factors), and then running this simulation a large number of times to obtain an expected value (and thus, fair price for the option at the current time.
