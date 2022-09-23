@@ -176,8 +176,8 @@ if __name__ == "__main__":
         p = analytic_stock_prob(S_range, S_0, r, sigma, t_index)
         
         # plot both - exp. histogram and analytic pdf curve
-        axs_2[i].hist(S_exp_index, density=True, bins=100, label="Simulation Results")
-        axs_2[i].plot(S_range, p, c='k', lw=4, label="Theoretical Prediction")
+        axs_2[i].hist(S_exp_index, density=True, color='r', bins=100, label="Simulation Results")
+        axs_2[i].plot(S_range, p, c='k', alpha=0.65,  lw=2, label="Theoretical Prediction")
         
         t_title = '%s' % float('%.1g' % t_index)
         
