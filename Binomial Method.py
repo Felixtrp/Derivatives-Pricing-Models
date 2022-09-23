@@ -392,6 +392,8 @@ if __name__ == "__main__":
     axs_2[0][1].plot(S_0_hold_list, V_A_hold_list, c='r', label = "American Option (Held)")
     if len(S_0_exercise_list)>0:
         axs_2[0][1].plot(S_0_exercise_list, V_A_exercise_list, '--', c='r', label = "American Option (Exercised)")
+        if option_type == "put":
+            print("Optimal Exercise at T = " + str(T) + ":", max(S_0_exercise_list))
 
     ## Timestep 2
     T = 5 # to,e tp expiry
@@ -421,7 +423,9 @@ if __name__ == "__main__":
     axs_2[1][1].plot(S_0_hold_list, V_A_hold_list, c='r', label = "American Option (Held)")
     if len(S_0_exercise_list)>0:
         axs_2[1][1].plot(S_0_exercise_list, V_A_exercise_list, '--', c='r', label = "American Option (Exercised)")
-    
+        if option_type == "put":
+            print("Optimal Exercise at T = " + str(T) + ":", max(S_0_exercise_list))
+
     t_title = str(T)
     title_string = "t = " + t_title
     axs_2[1][1].text(0.25, .7,title_string,
@@ -455,13 +459,16 @@ if __name__ == "__main__":
     axs_2[2][1].plot(S_0_hold_list, V_A_hold_list, c='r', label = "American Option (Held)")
     if len(S_0_exercise_list)>0:
         axs_2[2][1].plot(S_0_exercise_list, V_A_exercise_list, '--', c='r', label = "American Option (Exercised)")
-    
+        if option_type == "put":
+            print("Optimal Exercise at T = " + str(T) + ":", max(S_0_exercise_list))
+
     t_title = str(T)
     title_string = "t = " + t_title
     axs_2[2][1].text(0.25, .7,title_string,
             transform=axs_2[2][1].transAxes, fontsize=10)
 
     
+
     ## Timestep 4
     T = 0 # to,e tp expiry
     V_E_list = [] # European voption value
@@ -490,7 +497,9 @@ if __name__ == "__main__":
     axs_2[3][1].plot(S_0_hold_list, V_A_hold_list, c='r', label = "American Option (Held)")
     if len(S_0_exercise_list)>0:
         axs_2[3][1].plot(S_0_exercise_list, V_A_exercise_list, '--', c='r', label = "American Option (Exercised)")
-    
+        if option_type == "put":
+            print("Optimal Exercise at T = " + str(T) + ":", max(S_0_exercise_list))
+
     t_title = str(T)
     title_string = "t = " + t_title
     axs_2[3][1].text(0.25, .7,title_string,
