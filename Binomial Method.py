@@ -193,7 +193,7 @@ if __name__ == "__main__":
 
     # # Plot the binary tree to demonstrate how the stock price is being modelled.
     T = 3.0 # time horizon (time to expiry)
-    trials = 10000 # how many lines to show in the plot
+    trials = 1000 # how many lines to show in the plot
     plot_stock_sample(S_0, r, sigma, T, steps, trials)
     
 
@@ -322,7 +322,7 @@ if __name__ == "__main__":
             transform=axs_2[2][0].transAxes, fontsize=10)
     
     ## Timestep 4
-    T = 0.0 # to,e tp expiry
+    T = 0 # to,e tp expiry
     V_E_list = [] # European voption value
 
     S_0_hold_list = []
@@ -421,6 +421,11 @@ if __name__ == "__main__":
     axs_2[1][1].plot(S_0_hold_list, V_A_hold_list, c='r', label = "American Option (Held)")
     if len(S_0_exercise_list)>0:
         axs_2[1][1].plot(S_0_exercise_list, V_A_exercise_list, '--', c='r', label = "American Option (Exercised)")
+    
+    t_title = str(T)
+    title_string = "t = " + t_title
+    axs_2[1][1].text(0.25, .7,title_string,
+            transform=axs_2[1][1].transAxes, fontsize=10)
 
     ## Timestep 3
     T = 2 # to,e tp expiry
@@ -451,9 +456,14 @@ if __name__ == "__main__":
     if len(S_0_exercise_list)>0:
         axs_2[2][1].plot(S_0_exercise_list, V_A_exercise_list, '--', c='r', label = "American Option (Exercised)")
     
+    t_title = str(T)
+    title_string = "t = " + t_title
+    axs_2[2][1].text(0.25, .7,title_string,
+            transform=axs_2[2][1].transAxes, fontsize=10)
+
     
     ## Timestep 4
-    T = 0.0 # to,e tp expiry
+    T = 0 # to,e tp expiry
     V_E_list = [] # European voption value
 
     S_0_hold_list = []
@@ -481,6 +491,13 @@ if __name__ == "__main__":
     if len(S_0_exercise_list)>0:
         axs_2[3][1].plot(S_0_exercise_list, V_A_exercise_list, '--', c='r', label = "American Option (Exercised)")
     
+    t_title = str(T)
+    title_string = "t = " + t_title
+    axs_2[3][1].text(0.25, .7,title_string,
+            transform=axs_2[3][1].transAxes, fontsize=10)
+    
+    #####
+
     axs_2[0][0].set_title("Call Options")
     axs_2[0][1].set_title("Put Options")
 
