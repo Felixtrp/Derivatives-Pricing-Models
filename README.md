@@ -27,10 +27,6 @@ The binomial tree demonstrates a clear similarity to the Monte-Carlo stock prici
 
 ![BinomialStockPriceProbabilities](https://user-images.githubusercontent.com/64906690/192006212-f9f2717b-c892-4f28-b148-4563065fff0b.png)
 
-The binomial tree demonstrates a clear similarity to the Monte-Carlo stock pricing plot.  The plot of the binomial tree - with weighted branches - was produced by a random walk through the possible paths.  Althogh there is no randomness in the binomial tree pricing model, the incorporation of a random walk provides insight into how the process replicates a system similar to geometric brownianmotion in the limit.
-
-![BinomialStockPriceProbabilities](https://user-images.githubusercontent.com/64906690/192006212-f9f2717b-c892-4f28-b148-4563065fff0b.png)
-
 For European-style options, the value of the option at expiry for each possible outcome is easily foun, given the payoff function for the specific optino.  Then, the price at each point on the tree in the step immediately prior to expiry can be found: it is the expected value of the option {=pu + (1-p)d}, discounted by the appropriate interest rate, exp(r delta_t).  Iteratively working backwards through the tree, a value of the option at the current time is found.  This technique is easily applied to any European-option (exercise not before expiry), with any specified payoff function, as long as the initial stock price, interest rate, volatility and time-to-expiry are given.
 
 For American options, the opportunity for early exercise is easily incorporated.  At a time-step m, if the option is exercised, the option will produce payoff(S_m).  If it is not exercised, the option will have the value of the discounted expected value for the subsequent timestep (just like the European option).  The value of the option will be tied to the optimal exercise of the option, and so will be the maximum of these two quantities.  Noting whether or not it is optimal to exercise an option will also generate the exercise boundary s_f(t), which exists for certain American options.
