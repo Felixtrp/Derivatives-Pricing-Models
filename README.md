@@ -3,10 +3,21 @@ This repo contains programmes exploring different methods for determining the pr
 
 The repo contains programs that use a number of different implementations.
 
-## Analytic Methods
-The Black-Scholes equation can be used to determine the value of certain derivatives (European calls and pits) and has an analytic solution.
-The equation relies on a number of simplifying assumptions.  The equation - and modified versions of the equation - are still widely used as basis for many option pricing models.
-The programs in this repo explore the equation, and find solutions to it using a number of different numerical methods.
+## The Black-Scholes Equation
+
+The Black-Scholes equation is a PDE that describes the relationship between the price of a European option and the variables upon which its value is dependent: stock price, time, volatility and interest rates.  The equation can be solved to determine analytic solutions for the value of certain derivatives (European calls and puts).  It can slod be solved numerically to compute values of options with more complex payoffs.
+
+This program calculates both analytic values for European calls and puts, and also solves the Black-Scholes equations numerically for more complex options.
+
+The results of the European options are shown here:
+![EuropeanCall](https://user-images.githubusercontent.com/64906690/192106297-d51adf74-0a5d-46ae-a6e8-1dc866af6463.png)
+![EuropeanPut](https://user-images.githubusercontent.com/64906690/192106305-0c335848-630a-4f51-b7a1-dd6c69fdb518.png)
+
+
+and the results of the value of a option that pays out if the stock expires in a certain price range is shown here:
+![ExoticOptionValue](https://user-images.githubusercontent.com/64906690/192106323-ac554657-d236-41bd-9a6d-0fbfd5df4b58.png)
+
+The results produced by this Black-Scholes program can be used to test other numerical methods for options pricing to check for coherent solutions.
 
 ## Geometric Brownian Motion - Stock Pricing
 To model complex or 'exotic' options, it issometimes necessary to resort to Monte-Carlo methods: producing a simulation of how the value derived from a single derivative evolves over time due to random variation in the price of an underlying or any other factors), and then running this simulation a large number of times to obtain an expected value (and thus, fair price for the option at the current time.
