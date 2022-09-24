@@ -53,5 +53,20 @@ For puts, American options are more valuable than European options, particularly
 As the time to expiry decreases, the value of the options approach the known payoff function for both calls and puts, for both American and European options, as expected.
 
 
-## Monte Carlo Methods - Options Pricing
-In a Monte-Carlo program, the values of certain European options are calculated and compared with the analytic results as a test of the program.  Then, path-dependent options are investigated and their values evaluated.
+## Monte-Carlo Methods - Options Pricing
+For options with complex payoffs, Monte-Carlo methods may be necessary.
+
+With this method, the evolution of the price of a stock is simulated up to an expiry date.  The reulting payoff from a complex option is then calculated, given this price evolution.  The process is repeated many times, and the price f an option can be evaluated as the expected return at expiry, discounted by the appropriate factor, exp(-rT).
+
+Two options are investigated using this method:
+1. The 'Asian call' option - where the option payoff is the maximum of (aerage stock price - strike price) or zero, averaged over te period between issue and expiry (arithmetic average, in this case).
+2. The 'lookback call' - where the option payoff is the maximum of (maximum stock price in the interval between issue and expiry - strike price) or zero.
+
+Both plots are shown below.  Error bars are necessary, as the results obtained are simply estimates from numerical simulations.  The precision can be made arbitrarily large by increasing the number of simulations, although this is obviously more computationally expensive.
+
+![AsianCallOption](https://user-images.githubusercontent.com/64906690/192119204-6d7b3b2c-153c-40f8-97a1-69b115064503.png)
+
+
+![LookbackOptionCall](https://user-images.githubusercontent.com/64906690/192119207-d777bff0-7fff-4ccf-b31d-92af25590ac1.png)
+
+For lookback options, the number of timesteps in the simulation becomes more important - larger numbers of timesteps lead to the presence of more extreme values in the simulation ensemble - a consequence of modelling stock price using geometric Brownian motion.  Since the prie of this option is determined by those extreme values, larger numbers of timesteps corresponds with larger predicted option value.  The true value is approached asymptotically as the number of timesteps increases - the true nature of geometric Brownian motion is infinitesimal, so a greater number of smaller timesteps estimates this more accurately.
